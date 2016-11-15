@@ -1,0 +1,7 @@
+# Ignore configuration files that may contain sensitive information.
+# sites/*/settings*.php # use ENV!
+
+# Ignore paths that contain user-generated content.
+# sites/*/files
+# sites/*/private
+# there is a nicer way to do things!
