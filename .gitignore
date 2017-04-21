@@ -5,3 +5,4 @@
 # sites/*/files
 # sites/*/private
 # there is a nicer way to do things!
+/vendor/
