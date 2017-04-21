@@ -245,6 +245,16 @@
  * @endcode
  */
 $databases = array();
+# using a Heroku Postgresql DB
+$heroku_db_url = parse_url($_ENV['DATABASE_URL']);
+$databases['default']['default'] = array(
+  'driver' => 'pgsql',
+  'database' => substr($heroku_db_url['path'], 1),
+  'username' => $heroku_db_url['user'],
+  'password' => $heroku_db_url['pass'],
+  'host' => $heroku_db_url['host'],
+  'prefix' => $_ENV['DATABASE_PREFIX'],
+);
 
 /**
  * Access control for update.php script.
